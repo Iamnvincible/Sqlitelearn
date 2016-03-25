@@ -11,5 +11,6 @@
         <Button Content="create a sqlite database" HorizontalAlignment="Center" Click="Button_Click"></Button>
         <Button Content="show" HorizontalAlignment="Center" Click="Button_Click1"></Button>
         <Button Content="update" HorizontalAlignment="Center" Click="Button_Click2"></Button>
+        <Button Content="delete" HorizontalAlignment="Center" Click="Button_Click3"></Button>
     </StackPanel>
 </Page>

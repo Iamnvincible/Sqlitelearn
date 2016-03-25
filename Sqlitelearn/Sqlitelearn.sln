@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sqlite0", "sqlite0\sqlite0.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLitetry", "SQLitetry\SQLitetry.csproj", "{AA374693-C575-4CB0-B82E-DF3F7F1F4527}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLboomlitepcl", "SQLboomlitepcl\SQLboomlitepcl.csproj", "{34E7594B-BF3D-46F0-9B97-812B218E4075}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -53,6 +55,24 @@ Global
 		{AA374693-C575-4CB0-B82E-DF3F7F1F4527}.Release|x86.ActiveCfg = Release|x86
 		{AA374693-C575-4CB0-B82E-DF3F7F1F4527}.Release|x86.Build.0 = Release|x86
 		{AA374693-C575-4CB0-B82E-DF3F7F1F4527}.Release|x86.Deploy.0 = Release|x86
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Debug|ARM.ActiveCfg = Debug|ARM
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Debug|ARM.Build.0 = Debug|ARM
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Debug|ARM.Deploy.0 = Debug|ARM
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Debug|x64.ActiveCfg = Debug|x64
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Debug|x64.Build.0 = Debug|x64
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Debug|x64.Deploy.0 = Debug|x64
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Debug|x86.ActiveCfg = Debug|x86
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Debug|x86.Build.0 = Debug|x86
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Debug|x86.Deploy.0 = Debug|x86
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Release|ARM.ActiveCfg = Release|ARM
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Release|ARM.Build.0 = Release|ARM
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Release|ARM.Deploy.0 = Release|ARM
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Release|x64.ActiveCfg = Release|x64
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Release|x64.Build.0 = Release|x64
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Release|x64.Deploy.0 = Release|x64
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Release|x86.ActiveCfg = Release|x86
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Release|x86.Build.0 = Release|x86
+		{34E7594B-BF3D-46F0-9B97-812B218E4075}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
