@@ -7,7 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button Content="create a sqlite database" HorizontalAlignment="Center" Click="Button_Click"></Button>
-    </Grid>
+        <Button Content="show" HorizontalAlignment="Center" Click="Button_Click1"></Button>
+        <Button Content="update" HorizontalAlignment="Center" Click="Button_Click2"></Button>
+    </StackPanel>
 </Page>
