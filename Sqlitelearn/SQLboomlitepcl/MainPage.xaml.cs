@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using SQLitePCL;
+using System.Text;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -47,40 +49,49 @@ namespace SQLboomlitepcl
             SQLiteConnection conn = new SQLiteConnection(DB_NAME);
             using (var statement = conn.Prepare(SQL_INSERT))
             {
-                statement.Bind(1, "hhhhh");
-                statement.Bind(2, "fkfjfk");
+                statement.Bind(1, "Keyssss");
+                statement.Bind(2, "Valuess");
                 statement.Step();
             }
         }
 
-        private void read_Click(object sender, RoutedEventArgs e)
+        private async void read_Click(object sender, RoutedEventArgs e)
         {
             SQLiteConnection conn = new SQLiteConnection(DB_NAME);
             using (var statement = conn.Prepare(SQL_QUERY_VALUE))
             {
-               var a= statement.Step();
-                if (SQLiteResult.ROW == a)
+                StringBuilder sb = new StringBuilder();
+                while (statement.Step() == SQLiteResult.ROW)
                 {
-                   var  value = statement[0] as String;
+                    for (int i = 0; i < statement.DataCount; i++)
+                    {
+                        sb.AppendLine(statement[i].ToString());
+                    }
                 }
-
+                await new MessageDialog(sb.ToString()).ShowAsync();
             }
         }
 
         private void update_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void date_Click(object sender, RoutedEventArgs e)
-        {
-
+            SQLiteConnection conn = new SQLiteConnection(DB_NAME);
+            using (var statement = conn.Prepare(SQL_UPDATE))
+            {
+                statement.Bind(1, "Lin");
+                statement.Bind(2, "hhhhh");
+                statement.Step();
+            }
         }
 
 
         private void delete_Click(object sender, RoutedEventArgs e)
         {
-
+            SQLiteConnection conn = new SQLiteConnection(DB_NAME);
+            using (var statement = conn.Prepare(SQL_DELETE))
+            {
+                statement.Bind(1, "hhhhh");
+                statement.Step();
+            }
         }
 
     }
