@@ -49,8 +49,8 @@ namespace SQLboomlitepcl
             SQLiteConnection conn = new SQLiteConnection(DB_NAME);
             using (var statement = conn.Prepare(SQL_INSERT))
             {
-                statement.Bind(1, "Keyssss");
-                statement.Bind(2, "Valuess");
+                statement.Bind(1, "Added");
+                statement.Bind(2, "删我");
                 statement.Step();
             }
         }
@@ -77,8 +77,8 @@ namespace SQLboomlitepcl
             SQLiteConnection conn = new SQLiteConnection(DB_NAME);
             using (var statement = conn.Prepare(SQL_UPDATE))
             {
-                statement.Bind(1, "Lin");
-                statement.Bind(2, "hhhhh");
+                statement.Bind(1, "你好你好");
+                statement.Bind(2, "Keyssss");
                 statement.Step();
             }
         }
@@ -89,7 +89,7 @@ namespace SQLboomlitepcl
             SQLiteConnection conn = new SQLiteConnection(DB_NAME);
             using (var statement = conn.Prepare(SQL_DELETE))
             {
-                statement.Bind(1, "hhhhh");
+                statement.Bind(1, "Added");
                 statement.Step();
             }
         }

@@ -30,7 +30,7 @@ namespace sqlite0
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private static String DB_NAME = "SQLiteSample.db";
+        private static String DB_NAME = "linq.db";
 
 
         public MainPage()
@@ -71,20 +71,27 @@ namespace sqlite0
             }
         }
 
-        private void Button_Click2(object sender, RoutedEventArgs e)
+        private async void Button_Click2(object sender, RoutedEventArgs e)
         {
             string path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, DB_NAME);
             using (var conn = new SQLiteConnection(new SQLitePlatformWinRT(), path))
             {
                 conn.CreateTable<User>();
-                //conn.Update(new User { Id = 1, UserName = "Michael Jackson" });//垃圾
-
-                var q = conn.Table<User>().FirstOrDefault(x => x.UserName == "Lin");
-                if (q != null)
-                {
-                    q.UserName = "Michael";
-                    conn.Update(q);
-                }
+                conn.Update(new User { Id = 1, UserName = "Michael Jackson" });//垃圾
+                var q1 = conn.Table<User>().Count(x=>x.UserName=="HHHH");
+                await new MessageDialog(q1.ToString()).ShowAsync();
+                //foreach (var VARIABLE in q1)
+                //{
+                //    VARIABLE.UserName = "HHHH";
+                //    conn.Update(VARIABLE);
+                //}
+               // conn.UpdateAll(q1);
+                //var q = conn.Table<User>().FirstOrDefault(x => x.UserName == "Lin");
+                //if (q != null)
+                //{
+                //    q.UserName = "Michael";
+                //    conn.Update(q);
+                //}
             }
         }
 
